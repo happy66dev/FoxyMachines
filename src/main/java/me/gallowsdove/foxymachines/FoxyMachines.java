@@ -32,8 +32,6 @@ import me.gallowsdove.foxymachines.tasks.GhostBlockTask;
 import me.gallowsdove.foxymachines.tasks.MobTicker;
 import me.gallowsdove.foxymachines.tasks.QuestTicker;
 import me.gallowsdove.foxymachines.utils.QuestUtils;
-import net.guizhanss.guizhanlibplugin.updater.GuizhanUpdater;
-
 import javax.annotation.Nonnull;
 import java.io.File;
 import java.util.logging.Level;
@@ -57,10 +55,6 @@ public class FoxyMachines extends AbstractAddon {
             getLogger().log(Level.SEVERE, "从此处下载: https://50L.cc/gzlib");
             getServer().getPluginManager().disablePlugin(this);
             return;
-        }
-
-        if (getConfig().getBoolean("auto-update") && getDescription().getVersion().startsWith("Build")) {
-            GuizhanUpdater.start(this, getFile(), "SlimefunGuguProject", "FoxyMachines", "master");
         }
 
         Events.registerListener(new ChunkLoadListener());

@@ -1,6 +1,3 @@
-# 是否启用自动更新
-auto-update: true
-
 # 每位玩家可以摆放的区块加载器上限
 # 设置为0时无限制
 max-chunk-loaders: 8
