@@ -1,4 +1,4 @@
-# FoxyMachines 神秘科技
+# FoxyMachines 神秘科技 [魔改版]
 
 FoxyMachines 向 [Slimefun](https://github.com/Slimefun/Slimefun4) 添加了许多的机器与工具。本附属由 GallowsDove 热情制作。
 
@@ -63,3 +63,7 @@ FoxyMachines 向 [Slimefun](https://github.com/Slimefun/Slimefun4) 添加了许�
 
 * 献祭祭坛
 * 幽灵方块
+
+## ⭐ Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=happy66dev/FoxyMachines&type=Date)](https://star-history.com/#happy66dev/FoxyMachines&Date)
