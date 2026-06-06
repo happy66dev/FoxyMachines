@@ -39,6 +39,7 @@ import javax.annotation.Nullable;
 import java.util.*;
 
 
+@SuppressWarnings("deprecation")
 public class ElectricGoldRefinery extends SlimefunItem implements EnergyNetComponent {
     private static final int[] BORDER = { 2, 3, 4, 5, 6, 7, 8, 14, 23, 32, 41, 47, 48, 49, 50, 51, 52, 53 };
     private static final int[] BORDER_IN = { 11, 12, 13, 20, 22, 29, 31, 38 , 39, 40 };

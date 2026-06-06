@@ -33,6 +33,7 @@ import java.io.*;
 import java.lang.reflect.Type;
 import java.util.*;
 
+@SuppressWarnings("deprecation")
 public final class ForcefieldDome extends SlimefunItem implements EnergyNetComponent {
 
     public static HashSet<Block> FORCEFIELD_BLOCKS = new HashSet<>();

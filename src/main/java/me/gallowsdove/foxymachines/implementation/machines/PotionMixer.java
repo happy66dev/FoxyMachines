@@ -5,6 +5,7 @@ import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.core.attributes.EnergyNetComponent;
+import io.github.thebusybiscuit.slimefun4.core.attributes.RecipeDisplayItem;
 import io.github.thebusybiscuit.slimefun4.core.handlers.BlockBreakHandler;
 import io.github.thebusybiscuit.slimefun4.core.networks.energy.EnergyNetComponentType;
 import io.github.thebusybiscuit.slimefun4.implementation.Slimefun;
@@ -41,7 +42,8 @@ import javax.annotation.Nullable;
 import java.util.*;
 
 
-public class PotionMixer extends SlimefunItem implements EnergyNetComponent {
+@SuppressWarnings("deprecation")
+public class PotionMixer extends SlimefunItem implements EnergyNetComponent, RecipeDisplayItem {
     private static final int[] BORDER = {3, 4, 5, 27, 28, 29, 33, 34, 35, 36, 37, 38, 42, 43, 44};
     private static final int[] BORDER_IN = {0, 1, 2, 6, 7, 8, 9, 11, 12, 14, 15, 17, 18, 19, 20, 24, 25, 26};
     private static final int[] BORDER_OUT = {21, 22, 23, 30, 32, 39, 40, 41};
@@ -134,6 +136,18 @@ public class PotionMixer extends SlimefunItem implements EnergyNetComponent {
     @Nonnull
     public ItemStack getProgressBar() {
         return new ItemStack(Material.GOLDEN_HOE);
+    }
+
+    @Nonnull
+    @Override
+    public List<ItemStack> getDisplayRecipes() {
+        List<ItemStack> displayRecipes = new ArrayList<>();
+        for (ItemStack item : getRecipe()) {
+            if (item != null && item.getType() != Material.AIR) {
+                displayRecipes.add(new CustomItemStack(item, item.getAmount()));
+            }
+        }
+        return displayRecipes;
     }
 
     @Nullable
